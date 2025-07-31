@@ -53,7 +53,7 @@ E pronto! A aplicação estará funcionando.
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido com dedicação por **[Seu Nome]** ([@alleoliveira](https://github.com/alleoliveira)).
+Projeto desenvolvido com dedicação por **Alle Oliveira** ([@alleoliveira](https://github.com/alleoliveira)).
 
 
 ## 📝 Licença
