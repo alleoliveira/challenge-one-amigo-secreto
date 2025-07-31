@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ícones da biblioteca RemixIcon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>AMIGO SECRETO</title>
+</head>
+
+<body>
+    <!-- Barra de navegação com logo -->
+    <nav>
+        <div class="nav__logo">
+            <a href="#">AMIGO<span>SECRETO</span>.</a>
+        </div>
+    </nav>
+    <!-- Seção principal com imagem e formulário -->
+    <header class="header__container">
+        <div class="header__image">
+            <!-- Cards decorativos com nomes e ícones -->
+            <div class="header__image__card header__image__card-1">
+                <span><i class="ri-headphone-line"></i></span>
+                João
+            </div>
+            <div class="header__image__card header__image__card-2">
+                <span><i class="ri-gift-2-line"></i></span>
+                Paula
+            </div>
+            <div class="header__image__card header__image__card-3">
+                <span><i class="ri-glasses-2-line"></i></span>
+                Andressa
+            </div>
+            <div class="header__image__card header__image__card-4">
+                <span><i class="ri-shirt-line"></i></span>
+                Mateus
+            </div>
+            <img src="assets/gifts.png" alt="Presentes" id="gifts-image" />
+        </div>
+        <div class="header__content">
+            <h1>VAMOS LÁ!<br />DESCUBRA QUEM É SEU <span>AMIGO</span>SECRETO.</h1>
+            <p>Preencha os campos abaixo com <span class="highlight-text">3 nomes no mínimo</span> e clique em <b>"SORTEAR AMIGO"</b> para descobrir quem é o seu amigo secreto.</p>
+            <!-- Formulário para adicionar participantes e realizar sorteio -->
+            <form action="/" method="post" id="secret-friend-form">
+                <div id="participant-inputs-container">
+                    <div class="input__row">
+                        <div class="input__group">
+                            <input type="text" name="name" placeholder="Digite o nome do participante" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons__row">
+                    <div class="input__group">
+                        <button type="button" id="add-participant-btn">ADICIONAR PARTICIPANTE</button>
+                    </div>
+                    <div class="input__group">
+                        <button type="submit" id="draw-friend-btn" disabled>SORTEAR AMIGO</button>
+                    </div>
+                    <div class="input__group hidden" id="reset-container">
+                        <button type="button" id="reset-btn">REINICIAR SORTEIO</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Rodapé com informações de copyright -->
+        <div class="footer">
+            Copyright © 2025 @alleoliveira. All rights reserved.
+        </div>
+    </header>
+    <!-- Bibliotecas externas e script principal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+/* Importação da fonte Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Variáveis globais para cores e dimensões */
+:root {
+  --primary-color: #ff833e;
+  --primary-color-dark: #db6f35;
+  --primary-color-light-rgb: 250, 189, 162;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --text-light-gray: #ccc;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-height: 100px;
+}
+
+/* Reset básico */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo base do corpo */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--white);
+}
+
+.highlight-text {
+  color: var(--primary-color);
+  font-weight: 600; /* Deixa o texto em negrito para dar mais destaque */
+}
+
+/* Estilo da barra de navegação fixa */
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  height: var(--header-height);
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 0 2rem;
+  background-color: var(--white);
+  z-index: 10;
+}
+
+/* Estilo do logo na navegação */
+.nav__logo a {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.nav__logo span {
+  color: var(--primary-color);
+}
+
+/* Container principal com layout em grid */
+.header__container {
+  max-width: var(--max-width);
+  min-height: 100vh;
+  margin: auto;
+  padding-top: var(--header-height);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Estilo da seção de imagem com perspectiva */
+.header__image {
+  position: relative;
+  isolation: isolate;
+  perspective: 1000px;
+}
+
+/* Círculo decorativo de fundo */
+.header__image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  max-width: 550px;
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Imagem principal de presentes */
+#gifts-image {
+  max-width: 500px;
+  margin: auto;
+  transition: transform 0.2s ease-out;
+}
+
+/* Estilo dos cards decorativos com nomes */
+.header__image__card {
+  position: absolute;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  background-color: var(--white);
+  white-space: nowrap;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Posicionamento dos cards */
+.header__image__card-1 {
+  top: 10%;
+  left: 0;
+}
+
+.header__image__card-2 {
+  top: 40%;
+  left: -5%;
+}
+
+.header__image__card-3 {
+  top: 15%;
+  right: 0;
+}
+
+.header__image__card-4 {
+  top: 50%;
+  right: -5%;
+}
+
+.header__image__card span {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Estilo do conteúdo principal */
+.header__content {
+  padding: 0 2rem;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+  color: var(--text-dark);
+}
+
+.header__content h1 span {
+  color: var(--primary-color);
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+/* Estilo das linhas de input */
+.input__row {
+  margin-bottom: 1rem;
+}
+
+.input__group {
+  position: relative;
+}
+
+/* Estilo dos campos de input */
+.header__content input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--text-light-gray);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.header__content input::placeholder {
+  font-weight: 600;
+  color: var(--text-light-gray);
+}
+
+/* Estilo da linha de botões */
+.buttons__row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Estilo dos botões */
+.buttons__row button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttons__row button:hover {
+  background-color: var(--primary-color-dark);
+  transform: scale(1.05);
+}
+
+.header__content button:disabled {
+  background-color: var(--text-light-gray);
+  cursor: not-allowed;
+}
+
+.header__content button:disabled:hover {
+  background-color: var(--text-light-gray);
+  transform: none;
+}
+
+/* Estilo para erro nos inputs */
+.input__group.error input {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Estilo para input de resultado */
+.header__content .result-input {
+  background-color: rgba(var(--primary-color-light-rgb), 0.4);
+  border-color: var(--primary-color-dark);
+}
+
+/* Estilo do rodapé */
+.footer {
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-align: left;
+}
+
+/* Animação de flutuação */
+@keyframes floatAnimation {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-10px, -5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Classe para ocultar elementos */
+.hidden {
+  display: none !important;
+}
+
+/* Media queries para responsividade */
+@media (width > 900px) {
+  .header__image {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
+
+@media (width < 900px) {
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .header__image {
+    grid-area: 1/1/2/2;
+  }
+
+  #gifts-image {
+    max-width: 300px;
+  }
+}
+
+@media (width < 600px) {
+  .header__container {
+    padding-top: calc(var(--header-height) + 2rem);
+  }
+}
